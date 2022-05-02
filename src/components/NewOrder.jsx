@@ -72,17 +72,17 @@ export const NewOrder = () => {
           </span>
           <p className="status">Status: </p>
           <hr />
-        </div>
-      </div>
-      <div>
-        {orders.map((e) => (
-          <div style={{ padding: "20px 4px" }}>
-            {e.id}. {e.problem} - {e.brand} - {e.cost ? "$" + e.cost : null}
-            <div>
-              {e.owner_name} == {e.status}
-            </div>
+          <div>
+            {orders.map((e) => (
+              <div style={{ padding: "20px 4px" }}>
+                {e.id}. {e.problem} - {e.brand} - {e.cost ? "$" + e.cost : null}
+                <div>
+                  {e.owner_name} == {e.status}
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
