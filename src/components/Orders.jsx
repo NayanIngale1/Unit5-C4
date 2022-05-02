@@ -17,7 +17,7 @@ export const Orders = () => {
   const handleSort = (e) => {
     console.log("data");
     let d = [...orders].sort((a, b) => {
-      return a[e.target.value] > b[e.atrget.value]
+      return a[e.target.value] > b[e.target.value]
         ? 1
         : a[e.target.value] < b[e.target.value]
         ? -1
@@ -37,9 +37,15 @@ export const Orders = () => {
             id="progress"
             onChange={(e) => handleSort(e)}
           >
-            <option value="id">ID</option>
-            <option value="status">Status</option>
-            <option value="cost">Cost</option>
+            <option onChange={(e) => handleSort(e)} value="id">
+              ID
+            </option>
+            <option onChange={(e) => handleSort(e)} value="status">
+              Status
+            </option>
+            <option onChange={(e) => handleSort(e)} value="cost">
+              Cost
+            </option>
           </select>
         </div>
         <table className="orders">
